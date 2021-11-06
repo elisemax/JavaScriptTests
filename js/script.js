@@ -11,6 +11,8 @@ const personalMovieDB = {
     genres:[],
     privat: false
 };
-const lastFilm =prompt("last film what you see","");
-const awardFilm = prompt("how was good a film","");
-personalMovieDB.movies[lastFilm,awardFilm];
+const lastFilm = prompt("last film what you see",""),
+     awardFilm = prompt("how was good a film","");
+personalMovieDB.movies[lastFilm]=awardFilm;
+
+console.log(personalMovieDB);
