@@ -46,16 +46,13 @@ function showMyDB(){
     }
 }
 function writeYourGenres(){
-    for (let index = 0; index < 3; index++) {
+    for (let index = 1; index <= 3; index++) {
         
-        const faivoriteGenre = prompt("What is you faivorite genre?","");
-    if(faivoriteGenre!=null && faivoriteGenre.length<50 && faivoriteGenre!=''){
-        personalMovieDB.genres = faivoriteGenre;
-    }
-    }
-    const faivoriteGenre = prompt("What is you faivorite genre?","");
-    if(faivoriteGenre!=null && faivoriteGenre.length<50 && faivoriteGenre!=''){
-        personalMovieDB.genres = faivoriteGenre;
+        const faivoriteGenre = prompt(`What is you faivorite genre ${index}?`,"");
+
+        if(faivoriteGenre!=null && faivoriteGenre.length<50 && faivoriteGenre!=''){
+            personalMovieDB.genres[index-1] = faivoriteGenre;
+        }
     }
 }
 start();
